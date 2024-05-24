@@ -1,0 +1,140 @@
+@import "../global.scss";
+.login{
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+    min-height: 100vh;
+    background: url("../../public/assets/bg.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .left{
+        flex: 0.5;
+        height:65vh;
+        display: flex;
+        flex-direction: column;
+        padding:20px;
+        margin-left: 40px;
+        justify-content: center;
+        @include mobile{
+            margin-left: 0px;
+        }
+        .header{
+            margin-bottom: 20px;
+            display: flex;
+            @include mobile{
+                margin-bottom: 0px;
+                flex-direction: column;
+                align-items: center;
+            }
+            .name{
+                font-size: 50px;
+                color: white;
+                margin-right: 20px;
+                font-family: "Playfair Display", serif !important;
+                @include mobile{
+                    font-size: 40px;
+                }
+            }
+        }
+        .details p{
+            color: white;
+        }
+    }
+    .right{
+        flex: 0.5;
+        height: 65vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-box{
+        position: relative;
+        width:50vw;
+        max-width: 400px;
+        height: 100%;
+        max-height: 520px;
+        min-height: 450px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        background-color: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.505);
+        backdrop-filter: blur(7px);
+        @include mobile{
+            width:90vw;
+        }
+        .form-value{
+            width: 80%;
+        }
+    }
+}
+h2{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+.input-box{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: white;
+    .form-input{
+        width: 100%;
+        input{
+            color: white;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            margin-left: 7px;
+
+        }
+    }
+}
+.forget{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .checkbox{
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        color: white;
+        .check{
+            color:white;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+.Log{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 30px;
+    font-weight: 600;
+}
+[title="Username"] {
+    color: white !important;
+  }
+  
+  [title="Password"] {
+    color: white !important;
+  }
+  @media screen and (max-width: 1000px) {
+       .details{
+           display :none;
+       }
+  }
